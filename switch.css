@@ -1,0 +1,50 @@
+div
+{
+    height:200px;
+    width:200px;
+    margin:auto;
+   margin-top:400px;
+}
+#switch
+{
+    cursor: pointer;
+    display: none;
+}
+#label
+{
+width: 150px;
+height: 75px;
+background-color:white;
+display: block;
+border-radius: 50px;
+position: relative;
+cursor: pointer;
+padding: 3px;
+border: 2px solid rgba(124, 115, 115, 0.3);
+
+}
+#label::after
+{
+    content:'';
+    position: absolute;
+    width:75px;
+    height:75px;
+    display:block;
+    background-color:white ;
+    border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 4px 4px 6px 4px rgba(230, 196, 196, 0.3);
+  transition: 0.5s ease-in-out;
+
+}
+#switch:checked +label
+{
+    background-color: blue;
+    transition: 0.5s ease-in;
+}
+#switch:checked +label::after
+{
+    margin-left:72px;
+    transition: 0.5s ease-in-out;
+
+}
